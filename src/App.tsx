@@ -5,10 +5,10 @@ import Share from './icons/Share'
 
 const App = () => {
   return (
-    <div>
+    <div className='flex items-center'>
       <Button variant="secondary" size="sm" text="Share" startIcon={<Share size="md"/>  }/>
       <Button variant="primary" size="md" text="Add content" startIcon={<Plus size="md" />}/>
-      
+      <Button variant="primary" size="md" text="Delete content" startIcon={<Plus size="md" />}/> 
     </div>
   )
 }

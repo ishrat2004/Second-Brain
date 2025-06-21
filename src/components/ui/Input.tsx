@@ -1,9 +1,12 @@
 import React from 'react'
-
-const Input = ({placeholder,onChange}) => {
+interface InputProps{ 
+    placeholder:string;
+    ref?:any;
+}
+const Input = ({placeholder,ref}:InputProps ) => {
   return (
     <div>
-        <input type="text" className="px-4 py-2 rounded-md w-full" placeholder={placeholder} onChange={onChange}/>
+        <input type="text" className="px-4 py-2 rounded-md w-full border m-2" placeholder={placeholder} ref={ref} />
     </div>
   )
 }

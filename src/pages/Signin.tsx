@@ -27,10 +27,10 @@ export function Signin(){
                alert("Signin Successful");
                navigate("/dashboard"); 
          }
-      return <div className="h-screen w-screen bg-gray-200 flex justify-center items-center "> 
-            <div className="bg-white rounded-xl border min-w-48 p-8 "> 
-                <Input ref={usernameRef} placeholder={"username"} />
-                <Input ref={passwordRef} placeholder={"password"} /> 
+      return <div className="transition-all duration-1000 ease-in-out "> 
+            <div className="bg-white rounded-xl border p-8 "> 
+                <Input ref={usernameRef}  placeholder={"Enter your username"} field="Username" />
+                <Input ref={passwordRef}  placeholder={"Enter your password"} field="Password"/> 
                 <div className="flex justify-center pt-4 items-center "> 
                 <Button  variant="primary" size="md"  text="Signin" fullwidth={true} loading={false} onClick={signin} /> 
              </div>

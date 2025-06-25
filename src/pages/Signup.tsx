@@ -4,7 +4,7 @@ import Input from "../components/ui/Input";
 import { BACKEND_URL } from "../config";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-export function Signup({changestate}:{changestate?:()=>void }){  
+export function Signup(){  
       const usernameRef=useRef<any>(null); 
       const passwordRef=useRef<any>(null);
       const navigate=useNavigate(); 

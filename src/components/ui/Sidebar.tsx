@@ -1,10 +1,10 @@
-import React from 'react'
+
 import SidebarCompo from './SidebarCompo'
 import Twitter from '../../icons/Twitter'
 import { Youtube } from '../../icons/Youtube'
 import Second_Brain from '../../icons/Second_Brain'
 import { Button } from './Button'
-import { Navigate, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 
 const Sidebar = () => { 
   const navigate=useNavigate(); 

@@ -6,15 +6,17 @@ import Input from "./Input";
 import { BACKEND_URL } from "../../config";
 import axios from "axios";
 
-enum ContentType{ 
-   Youtube="youtube",
-   Twitter="twitter",
-}
+export const ContentType = {
+  Youtube: "youtube",
+  Twitter: "twitter",
+} as const;
+
+export type ContentType = (typeof ContentType)[keyof typeof ContentType];
 
 export function CreateContentModel({open,onClose}){ 
      const titleref=useRef<any>(null); 
      const linkref=useRef<any>(null); 
-     const [type,setType]=useState(ContentType.Youtube);
+     const [type,setType]=useState<ContentType>(ContentType.Youtube);
      async function addcontent(){ 
           const title=titleref.current?.value;
           const link=linkref.current?.value; 

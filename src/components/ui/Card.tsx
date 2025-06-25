@@ -3,7 +3,7 @@ import Share from "../../icons/Share";
 import { Delete } from "../../icons/Delete";
 import { BACKEND_URL } from "../../config";
 import axios from "axios";
-import { useContent } from "../../hooks/useContent";
+// import { useContent } from "../../hooks/useContent";
 import { Youtube } from "../../icons/Youtube";
 import Twitter from "../../icons/Twitter";
 interface Cardprops{ 
@@ -14,7 +14,7 @@ interface Cardprops{
 }
 export function Card({title,link,type,id}:Cardprops){  
   const twitterRef = useRef<HTMLDivElement>(null);
-  const contents=useContent(); 
+  // const contents=useContent(); 
   useEffect(() => {
     if (type === "twitter") {
       // Dynamically load widgets.js if not already present

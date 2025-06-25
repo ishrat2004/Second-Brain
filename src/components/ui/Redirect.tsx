@@ -19,7 +19,7 @@ export function Redirect() {
        </div> 
         <div> 
             { user_state==="signup" ?
-            <Signup changestate={()=>setUserState("signin")}/>
+            <Signup />
            : <Signin/> }
         </div> 
     </div>

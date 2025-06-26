@@ -4,8 +4,8 @@ import { Delete } from "../../icons/Delete";
 import { BACKEND_URL } from "../../config";
 import axios from "axios";
 // import { useContent } from "../../hooks/useContent";
-import { Youtube } from "../../icons/Youtube";
-import Twitter from "../../icons/Twitter";
+import { Youtube } from "../../icons/Youtube_dash";
+import Twitter from "../../icons/Twitter_dash";
 interface Cardprops{ 
     title:string,
     link:string, 

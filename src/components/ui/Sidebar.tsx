@@ -1,7 +1,7 @@
 
 import SidebarCompo from './SidebarCompo'
-import Twitter from '../../icons/Twitter'
-import { Youtube } from '../../icons/Youtube'
+import Twitter from '../../icons/Twitter_dash'
+import { Youtube } from '../../icons/Youtube_dash'
 import Second_Brain from '../../icons/Second_Brain'
 import { Button } from './Button'
 import {  useNavigate } from 'react-router-dom'

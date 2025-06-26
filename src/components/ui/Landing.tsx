@@ -17,17 +17,17 @@ export function Landing(){
                     {/* <h1 className="text-7xl font-bold bg-gradient-to-r from-yellow-300 via-orange-300 to-rose-400 bg-clip-text text-transparent">
                     Second Brain
                     </h1> */} 
-                    <h1 className="text-7xl font-bold bg-gradient-to-r from-yellow-300 via-orange-300 to-rose-400 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient">
+                    <h1 className="text-5xl pt-4 md:text-7xl font-bold bg-gradient-to-r from-yellow-300 via-orange-300 to-rose-400 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient">
                     Second Brain
                     </h1>
 
                 </div>
             </div> 
-            <div className="grid grid-cols-12  h-full mt-2 "> 
-                <div className="col-span-11   rounded-md md:col-span-6">   
+            <div className="grid grid-cols-1 md:grid-cols-12  h-full mt-2 "> 
+                <div className="md:mb-0 rounded-md md:col-span-6">   
                   <Content/>
                 </div>
-                <div className="h-full col-span-11  rounded-3xl md:col-span-6 "> 
+                <div className="h-full  rounded-3xl md:col-span-6 "> 
                   <Redirect/>
                 </div>
             </div>    

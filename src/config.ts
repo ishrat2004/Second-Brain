@@ -1,4 +1,4 @@
-import { BookOpen, Github, Image, Link, Twitter, TwitterIcon, Youtube } from "lucide-react"
+import { BookOpen, Github, Image, Link, Twitter,  Youtube } from "lucide-react"
 
 export const BACKEND_URL="http://localhost:3000"
 

@@ -1,4 +1,4 @@
-import { Icon, Sparkles } from "lucide-react";
+import {  Sparkles } from "lucide-react";
 import { ContentItems } from "../../config";
 import { useEffect, useState } from "react";
 

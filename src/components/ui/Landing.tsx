@@ -26,7 +26,7 @@ export function Landing(){
                 <div className="md:mb-0 rounded-md md:col-span-6">   
                   <Content/>
                 </div>
-                <div className="h-full  rounded-3xl md:col-span-6 "> 
+                <div className="h-full  rounded-3xl   flex items-center px-20 md:col-span-6 md:w-full md:block "> 
                   <Redirect/>
                 </div>
             </div>    

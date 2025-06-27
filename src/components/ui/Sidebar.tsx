@@ -10,7 +10,7 @@ const Sidebar = () => {
   const navigate=useNavigate(); 
    function logout(){ 
       localStorage.removeItem("token"); 
-      navigate("/signin"); 
+      navigate("/"); 
    }
   return (
     <div className='h-screen w-72 bg-white border-r left-0 top-0 fixed pl-6 '>  

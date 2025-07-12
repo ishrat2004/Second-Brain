@@ -1,7 +1,8 @@
 import { BookOpen, Github, Image, Link, Twitter,  Youtube } from "lucide-react"
 
 export const BACKEND_URL="http://localhost:3000"
-
+export const API_LINK="https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
+export const API_KEY="AIzaSyDhE-HP0166EOcat-q7h-L1xJeS4RuepB4";
 export const ContentItems=[
     {  
         icon:Twitter,content:"Amazing insight about AI trends...",

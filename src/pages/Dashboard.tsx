@@ -8,15 +8,20 @@ import Sidebar from '../components/ui/Sidebar'
 import { useContent } from '../hooks/useContent'
 import { BACKEND_URL } from '../config'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Dashboard = () => { 
   const [modelopen,setmodelopen]=useState(false); 
   const contents=useContent();  
+  const navigate=useNavigate(); 
   return <div> 
     <Sidebar/>
     <div className='p-4 ml-72 min-h-screen bg-gray-200 border-2 '> 
     <CreateContentModel open={modelopen} onClose={()=>{setmodelopen(false) ;}}/>
      <div className='flex justify-end  gap-4 '>
+      <Button variant="primary" size="md" text="Gemini" onClick={()=>{
+        navigate("/gemini");
+      }}/>
       <Button variant="primary" size="md" text="Add content" startIcon={<Plus size="md" />} onClick={()=>{setmodelopen(true)}}/>
       <Button variant="secondary" size="sm" text="Share Brain" startIcon={<Share size="md"/>} onClick={async ()=>{ 
           const response=await axios.post(BACKEND_URL+"/api/v1/brain/share",{ 

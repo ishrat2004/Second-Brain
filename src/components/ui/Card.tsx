@@ -6,6 +6,8 @@ import axios from "axios";
 // import { useContent } from "../../hooks/useContent";
 import { Youtube } from "../../icons/Youtube_dash";
 import Twitter from "../../icons/Twitter_dash";
+import { Gemini_icon } from "../../icons/Gemini_icon";
+import { useNavigate } from "react-router-dom";
 interface Cardprops{ 
     title:string,
     link:string, 
@@ -14,6 +16,7 @@ interface Cardprops{
 }
 export function Card({title,link,type,id}:Cardprops){  
   const twitterRef = useRef<HTMLDivElement>(null);
+  const navigate=useNavigate(); 
   // const contents=useContent(); 
   useEffect(() => {
     if (type === "twitter") {
@@ -53,6 +56,11 @@ export function Card({title,link,type,id}:Cardprops){
               </div>
             </div>  
             <div className="flex gap-2 items-center"> 
+              <div onClick={()=>{ 
+                navigate("/gemini"); 
+              }} className="cursor-pointer"> 
+                <Gemini_icon/>
+              </div>
                     <div className="text-black hover:text-purple-600 cursor-pointer" > 
                         <a href={link} target={"_blank"} > 
                         <Share size="md" />

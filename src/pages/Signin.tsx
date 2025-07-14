@@ -19,8 +19,9 @@ export function Signin(){
                        password:password  
                } ) 
                const token=response.data.token;
-               console.log("token"+ token); 
+               //console.log("token"+ token); 
                localStorage.setItem("token",token); 
+               localStorage.setItem("username",response.data.username);
                navigate("/dashboard"); 
             }catch(err:any){ 
                 if(err.response && err.response.status===401){ 

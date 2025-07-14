@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { API_KEY, API_LINK } from "../config";
 import Answers from "../components/ui/Answers";
-import { Loader, Loader2 } from "lucide-react";
+import { Brain, Loader, Loader2 } from "lucide-react";
+import Close from "../icons/Close";
+import { Gemini_icon } from "../icons/Gemini_icon";
+import { Paper_plane } from "../icons/Paper_plane";
 
 export function Gemini(){ 
     const [question,setquestion]=useState(""); 
@@ -44,8 +47,36 @@ export function Gemini(){
     };
     return <div className="grid grid-cols-5 h-screen text-center bg-zinc-900"> 
           <div className="col-span-1 bg-zinc-800"> 
+            <div className="flex justify-center mt-5">   
+              <div> 
+                <Brain className="w-10 h-10 text-white "/>
+              </div>
+              <div> 
+                <h1 className="text-4xl bg-gradient-to-r from-yellow-300 via-orange-300 to-rose-400 
+                bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient "> 
+                  Second Brain
+                </h1>
+              </div>
+              </div>
+              <div className="flex justify-center"> 
+                <Close/>
+              </div>
+             <div className="text-4xl text-blue-600 font-bold text-center flex justify-center">
+              Gemini
+              <div className="m-2"> 
+                 <Gemini_icon/> 
+              </div>
+   
+             
+            </div>
           </div>
-          <div className="col-span-4 p-10 h-full overflow-scroll">
+          <div className="col-span-4 p-10 h-full overflow-scroll justify-center">
+              <div className="flex justify-center"> 
+                <h1 className="text-5xl text-blue-700"> 
+                  Hello {localStorage.getItem("username")}
+                </h1>
+                <Gemini_icon/>
+              </div>
              <div className="container h-110 "> 
               <div className="text-zinc-300"> 
                  <ul> 
@@ -81,8 +112,10 @@ export function Gemini(){
                   onKeyPress={handlekeypress}
                   className="w-full bg-inherit rounded-full px-3 outline-none text-zinc-200" type="text" placeholder={ isLoading ? "AI is thinking..." : "Ask me anything"}/>
                    
-                  <button onClick={send_prompt} className="bg-zinc-700 text-white rounded-md px-4 py-2 cursor-pointer ">
-                     {isLoading ?(<div><Loader2 className="animate-spin mr-2 h-2 w-2"/> Wait </div> ):("Ask") }
+                  <button onClick={send_prompt} className="bg-black text-white rounded-md px-4 py-2 cursor-pointer ">
+                     {isLoading ?(<div><Loader2 className="animate-spin mr-2 h-2 w-2"/> Wait </div> ):(
+                      <Paper_plane/>
+                     ) }
                   </button>
 
                 </div>

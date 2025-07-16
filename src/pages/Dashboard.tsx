@@ -45,7 +45,7 @@ const Dashboard = () => {
   },[isDesktop]); 
   return <div className='flex '> 
     <Sidebar sidebaropen={sidebaropen} setsidebaropen={setsidebaropen} />
-    <div className={ `transition-all duration-1000 p-4  min-h-screen bg-gray-200 border-2 ${sidebaropen ? 'ml-72' : 'ml-0'} ` }> 
+    <div className={ `transition-all duration-1000 p-4  min-h-screen w-screen bg-gray-200 border-2 ${sidebaropen ? 'ml-72' : 'ml-0'} ` }> 
       { !sidebaropen && <div> 
         <span className='cursor-pointer ' onClick={()=>{ 
                     setsidebaropen(!sidebaropen);

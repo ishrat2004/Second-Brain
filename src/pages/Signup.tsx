@@ -13,6 +13,7 @@ export function Signup({state_function}){
             const username=usernameRef.current?.value; 
             const password=passwordRef.current?.value; /// checking if value is existing or not with the help of ? 
             console.log("before"); 
+            alert("Our backend is down,it will be up in 50 sec"); 
             try{ 
             await axios.post(BACKEND_URL + "/api/v1/signup",{ 
                     username:username,
